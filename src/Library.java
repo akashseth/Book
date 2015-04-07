@@ -6,24 +6,11 @@ public class Library {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String tempTitle;
-		int choice;
-		Book book=new Book();
-		tempTitle=book.getTitle();
-		System.out.println("Enter the option you want");
-		System.out.println("1.Issue book");
-		System.out.println("2.Return a book");
-		Scanner scan=new Scanner(System.in);
-		choice=scan.nextInt();
-		switch(choice)
-		{
-		case 1:IssueBook(tempTitle);
-				break;
-		case 2:ReturnBook(tempTitle);
-				break;
-		default :System.out.println("You have entered wrong choice");
-		}
-
+		Book book=new Book("Data Structure\t","G.s Balluja\t",450,"SBIN125025\t", 10);
+		System.out.println(book.toString());
+		tempTitle=book.getTitle();	
 	}
+	
 	/*
 	 * Method for Issue Book
 	 */
@@ -38,8 +25,8 @@ public class Library {
 		  {	System.out.println("Enter the no. of copies you want to issue");
 			Scanner copies=new Scanner(System.in);
 			no_of_copies=copies.nextInt();
-			Book book=new Book();
-			book.IssueCopy(no_of_copies);
+			Book copy=new Book("Data Structure\t","G.s Balluja\t",450,"SBIN125025\t", 10);
+			copy.IssueCopy(no_of_copies);
 	      }
 	}
 	/*
@@ -56,7 +43,7 @@ public class Library {
 		  {	System.out.println("Enter the no. of copies you want to return");
 			Scanner copies=new Scanner(System.in);
 			no_of_copies=copies.nextInt();
-			Book book=new Book();
+			Book book=new Book("Data Structure\t","G.s Balluja\t",450,"SBIN125025\t", 10);
 			book.ReturnCopy(no_of_copies);
 	      }
 	}

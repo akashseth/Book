@@ -6,47 +6,53 @@ public class Book {
 	private String Author;
 	private int Price;
 	private String IsbnNo;
-	private int No_of_copies;
-	/*
-	 * Methor for Get Title
-	 */
+	private int NoOfCopies;
+	
+	public Book(String Title,String Author,int Price,String IsbnNo,int NoOfCopies)
+	{
+		this.Title=Title;
+		this.Author=Author;
+		this.Price=Price;
+		this.IsbnNo=IsbnNo;
+		this.NoOfCopies=NoOfCopies;
+	}
+	@Override
+    public String toString() {
+        return String.format(Title +Author +IsbnNo+Price);
+	}
 	public String getTitle()
-	{	String title="Data Structure";
-		Title=title;
+	{	
 		return Title;
 	}
 	/*
 	 * Method for Get Author
 	 */
 	public String getAuthor()
-	{	String author="G.S Balujja";
-		Author=author;
+	{	
 		return Author;
 	}
 	 /* 
 	 *Method for Get Price
 	 */
 	public int getPrice()
-	{	int price=450;
-		Price=price;
+	{	
 		return Price;
 	}
 	/*
 	 * Method for Get Isbn NO.
 	 */
 	public String getIsbnNo()
-	{	String isbnNo="9858452054";
-		IsbnNo=isbnNo;
+	{
 		return IsbnNo;
 	}
 	/*
 	 * Method for Get No Of Copies
 	 */
 	public int getNoOfCopies()
-	{	int no_of_copies=10;
-		No_of_copies=no_of_copies;
-		return No_of_copies;
+	{
+		return NoOfCopies;
 	}
+	
 	/*
 	 * Method for Issue Copy
 	 */
